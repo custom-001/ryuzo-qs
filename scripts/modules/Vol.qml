@@ -8,7 +8,12 @@ Text {
   text: "V"
   
   color: "#ebdbb2"
-  font { family: "Iosevka Nerd Font"; pixelSize: 24; bold: true; }
+  
+  font { 
+    family: "Iosevka Nerd Font"
+    pixelSize: 24
+    bold: true
+  }
 
   Process {
     id: volProc
@@ -18,7 +23,29 @@ Text {
     running: true
 
     stdout: StdioCollector {
-      onStreamFinished: vol.text = this.text.replace("Volume: ", "").trim() + "%"
+
+      onStreamFinished: {
+        const volume = parseFloat(
+          this.text.replace("Volume: ", "").trim()
+        )
+
+        if (isNaN(volume))
+          return
+
+        vol.text =
+          volume > 0.8 ? "" :
+          volume > 0.4 ? "" :
+          volume > 0.2 ? "" :
+          ""
+      }
+
     }
+  }
+
+  Timer {
+    interval: 500
+    running: true
+    repeat: true
+    onTriggered: volProc.running = true
   }
 }

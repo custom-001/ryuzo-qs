@@ -33,8 +33,12 @@ PanelWindow {
         verticalCenter: parent.verticalCenter
         rightMargin: 8
       }
+
+      spacing: 16
       
       Vol {}
+
+      Blight {}
     }
   }
 }
