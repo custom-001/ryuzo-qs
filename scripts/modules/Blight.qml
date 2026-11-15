@@ -7,7 +7,7 @@ Text {
 
   text: "B"
 
-  color: "#ebdbb2"
+  color: "#cdd6f4"
 
   font {
     family: "Iosevka Nerd Font"

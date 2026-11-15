@@ -7,7 +7,7 @@ Text {
   
   text: "C"
   
-  color: "#ebdbb2"
+  color: "#cdd6f4"
   font { family: "Iosevka Nerd Font"; pixelSize: 24; bold: true; }
   
   Process {

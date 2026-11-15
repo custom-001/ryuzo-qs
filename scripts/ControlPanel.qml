@@ -11,15 +11,28 @@ PanelWindow {
     left: true
     right: true
   }
+
+  margins {
+    top: 16
+    left: 24
+    right: 24
+  }
   
-  implicitHeight: 32
+  implicitHeight: 48
   
   color: "transparent"
   
   Rectangle {
     anchors.fill: parent
+
+    radius: 9999
     
-    color: "#282828"
+    color: "#1e1e2e"
+
+    border {
+      width: 4
+      color: "#e83436" 
+    }
     
     Row {
       anchors.centerIn: parent
@@ -31,7 +44,7 @@ PanelWindow {
       anchors {
         right: parent.right
         verticalCenter: parent.verticalCenter
-        rightMargin: 8
+        rightMargin: 24
       }
 
       spacing: 16
