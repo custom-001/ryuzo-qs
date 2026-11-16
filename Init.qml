@@ -7,4 +7,7 @@ ShellRoot {
   ControlPanel {}
 
   VolOsd {}
+  BlightOsd {}
+
+  ControlOsd {}
 }

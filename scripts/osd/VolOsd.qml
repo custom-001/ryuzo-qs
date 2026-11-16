@@ -35,7 +35,7 @@ PanelWindow {
 
     radius: 16
 
-    color: "#1e1e2e"
+    color: "#1e1e2e80"
 
     border { width: 4; color: "#e83437"; }
 
@@ -105,17 +105,6 @@ PanelWindow {
   }
 
   GlobalShortcut {
-    name: "volumeUpOsd"
-    description: "raises volume"
-
-    onPressed: {
-      volOsd.isVolumeUpPressed = true
-      hideTimer.restart()
-      volUpProc.running = true
-    }
-  }
-
-  GlobalShortcut {
     name: "volumeDownOsd"
     description: "lowers volume"
 
@@ -123,6 +112,17 @@ PanelWindow {
       volOsd.isVolumeDownPressed = true
       hideTimer.restart()
       volDownProc.running = true
+    }
+  }
+
+  GlobalShortcut {
+    name: "volumeUpOsd"
+    description: "raises volume"
+
+    onPressed: {
+      volOsd.isVolumeUpPressed = true
+      hideTimer.restart()
+      volUpProc.running = true
     }
   }
 
@@ -151,7 +151,7 @@ PanelWindow {
       onStreamFinished: {
         let value = parseFloat(this.text.replace("Volume: ", "").trim())
         volOsd.volValue = value
-        console.log(`value: ${value}`)
+        console.log(`volume value: ${value}`)
       }
     }
   }

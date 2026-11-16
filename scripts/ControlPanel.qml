@@ -27,7 +27,7 @@ PanelWindow {
 
     radius: 9999
 
-    color: "#1e1e2e"
+    color: "#1e1e2e80"
 
     border {
       width: 4
