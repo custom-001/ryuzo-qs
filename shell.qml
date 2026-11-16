@@ -2,8 +2,6 @@ import Quickshell
 
 import "."
 
-ShellRoot {
+Init {
   id: root
-  
-  Init {}
 }

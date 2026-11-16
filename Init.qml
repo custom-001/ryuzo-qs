@@ -1,7 +1,10 @@
 import Quickshell
 
 import "scripts"
+import "scripts/osd"
 
-ControlPanel {
+ShellRoot {
+  ControlPanel {}
 
+  VolOsd {}
 }
